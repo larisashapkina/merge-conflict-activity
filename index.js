@@ -1,4 +1,5 @@
 
+
 function AddNumsInArray(...arr) {
     if (!arr.every((el) => Number.isNumber(el)))
       throw "All arguments must be numbers.";
@@ -6,7 +7,7 @@ function AddNumsInArray(...arr) {
   }
   
   AddNumsInArray(1, 2, 3); //> 6
-  AddNumsInArray(10, "B", 20, {}); //> error All arguments must be numbers.
+  AddNumsInArray(10, "B", 20, "giraffe", "bubble", {}); //> error All arguments must be numbers.
 
 
 
