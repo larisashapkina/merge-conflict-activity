@@ -1,10 +1,12 @@
 
-function addNums(...arr) {
-    if (!arr.every((a) => Number.isNumber(a)))
+function AddNumsInArray(...arr) {
+    if (!arr.every((el) => Number.isNumber(el)))
       throw "All arguments must be numbers.";
-    return arr.reduce((num1, num2) => num1 + num1);
+    return arr.reduce((num1, num2) => num1 + num2);
   }
   
-  addNums(1, 2, 3); //> 6
-  addNums(10, "B", 20, []); //> error All arguments must be numbers.
+  AddNumsInArray(1, 2, 3); //> 6
+  AddNumsInArray(10, "B", 20, {}); //> error All arguments must be numbers.
+
+
 
