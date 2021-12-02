@@ -1,8 +1,13 @@
-function fn(...c) {
-  if (!c.every((a) => Number.isNumber(a)))
-    throw "All arguments must be numbers.";
-  return c.reduce((a, b) => a + b);
-}
 
-fn(1, 2, 3); //> 6
-fn(10, "B", 20, "giraffe", "bubble"); //> error All arguments must be numbers.
+
+function AddNumsInArray(...arr) {
+    if (!arr.every((el) => Number.isNumber(el)))
+      throw "All arguments must be numbers.";
+    return arr.reduce((num1, num2) => num1 + num2);
+  }
+  
+  AddNumsInArray(1, 2, 3); //> 6
+  AddNumsInArray(10, "B", 20, "giraffe", "bubble", {}); //> error All arguments must be numbers.
+
+
+
